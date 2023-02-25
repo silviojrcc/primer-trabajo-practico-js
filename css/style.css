@@ -44,5 +44,6 @@ main {
 }
 .btn-ejercicio:hover {
     background-color: #5d6669;
+    transform: scale(1.1);
 }
 
