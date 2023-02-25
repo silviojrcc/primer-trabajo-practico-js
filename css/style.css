@@ -11,7 +11,12 @@ body {
 main {
     padding: 100px;
 }
-
+@media (max-width: 767px) {
+    main {
+        padding: 30px;
+    }
+}
+  
 
 
 .introduccion {
