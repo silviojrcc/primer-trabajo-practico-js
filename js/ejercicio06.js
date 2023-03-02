@@ -5,10 +5,10 @@ function ejercicio06(el){
     <form class="form">
         <div class="">
             <label for="numero1">Numero 1</label>
-            <input class="numero1" name="numero1" type="number">
+            <input required class="numero1" name="numero1" type="number">
         </div>
         <label for="numero2">Numero 2</label>
-        <input class="numero2" name="numero2" type="number">
+        <input required class="numero2" name="numero2" type="number">
         <button>Cual es mayor?</button>
     </form>
     <p class="resultado"></p>
@@ -25,13 +25,18 @@ function ejercicio06(el){
         const numero1 = parseInt(num1);
         const numero2 = parseInt(num2);
 
-        if (numero1 == numero2) {
-            resultadoEl.innerHTML = `Los numeros son iguales`;
-        } else if (numero1 > numero2) {
-            resultadoEl.innerHTML = `El numero 1 es el mayor: ${numero1}`;
+        if (!isNaN(numero1) && !isNaN(numero2)){
+            if (numero1 == numero2) {
+                resultadoEl.innerHTML = `Los numeros son iguales`;
+            } else if (numero1 > numero2) {
+                resultadoEl.innerHTML = `El numero 1 es el mayor: ${numero1}`;
+            } else {
+                resultadoEl.innerHTML = `El numero 2 es el mayor: ${numero2}`;
+            }
         } else {
-            resultadoEl.innerHTML = `El numero 2 es el mayor: ${numero2}`;
+            resultadoEl.innerHTML = `Debe ingresar numeros validos`;
         }
+
     });
 
     el.append(articleEl);
