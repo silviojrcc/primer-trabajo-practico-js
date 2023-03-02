@@ -1,3 +1,3 @@
 function ejercicio02() {
-    document.write("Hola mundo")
+    document.write("<h1>Hola mundo</h1>")
 }
