@@ -18,12 +18,16 @@ function ejercicio09(el){
         const palabraEnMinuscula = palabra.toLowerCase();
         resultado.innerHTML = ``;
 
-        for (let i = 0; i < palabraEnMinuscula.length; i++) {
-            const letra = palabraEnMinuscula[i];
-
-            if ("aeiou".includes(letra)) {
-                resultado.append(letra);
+        if (!palabraEnMinuscula == "") {
+            for (let i = 0; i < palabraEnMinuscula.length; i++) {
+                const letra = palabraEnMinuscula[i];
+    
+                if ("aeiou".includes(letra)) {
+                    resultado.append(letra);
+                }
             }
+        } else {
+            resultado.innerHTML = `Debe ingresar una palabra!!`;
         }
     });
 
