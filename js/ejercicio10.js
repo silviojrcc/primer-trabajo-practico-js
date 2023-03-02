@@ -19,11 +19,16 @@ function ejercicio10(el) {
         const numeroText = articleEl.querySelector(".numero").value;
         const numero = parseInt(numeroText);
 
-        if (numero % 2 == 0 || numero % 3 == 0 || numero % 5 == 0 || numero % 7 == 2) {
-            resultado.innerHTML = `El numero ${numero} es divisible por 2, 3, 5, o 7`;
+        if (!isNaN(numero)) {
+            if (numero % 2 == 0 || numero % 3 == 0 || numero % 5 == 0 || numero % 7 == 2) {
+                resultado.innerHTML = `El numero ${numero} es divisible por 2, 3, 5, o 7`;
+            } else {
+                resultado.innerHTML = `El numero ${numero} no es divisible por estos números`;
+            }
         } else {
-            resultado.innerHTML = `El numero ${numero} no es divisible por estos números`;
+            resultado.innerHTML = `Debe ingresar un numero!!`;
         }
+
     });
 
     el.append(articleEl);
