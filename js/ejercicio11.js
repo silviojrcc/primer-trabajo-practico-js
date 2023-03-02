@@ -20,36 +20,42 @@ function ejercicio11(el) {
         const numero = parseInt(numeroText);
         resultado.innerHTML = ``;
 
-        if (numero % 2 == 0) {
-            const pEl = document.createElement("p");
-            pEl.innerHTML = `El número ${numero} es divisible por 2`;
-            resultado.append(pEl);
-            console.log("divisible x 2");
-        } 
-        if (numero % 3 == 0) {
-            const pEl = document.createElement("p");
-            pEl.innerHTML = `El número ${numero} es divisible por 3`;
-            resultado.append(pEl);
-            console.log("divisible x 3");
+
+        if (!isNaN(numero)) {
+            if (numero % 2 == 0) {
+                const pEl = document.createElement("p");
+                pEl.innerHTML = `El número ${numero} es divisible por 2`;
+                resultado.append(pEl);
+                console.log("divisible x 2");
+            } 
+            if (numero % 3 == 0) {
+                const pEl = document.createElement("p");
+                pEl.innerHTML = `El número ${numero} es divisible por 3`;
+                resultado.append(pEl);
+                console.log("divisible x 3");
+            }
+            if (numero % 5 == 0){
+                const pEl = document.createElement("p");
+                pEl.innerHTML = `El número ${numero} es divisible por 5`;
+                resultado.append(pEl);
+                console.log("divisible x 5");
+            }
+            if (numero % 7 == 0) {
+                const pEl = document.createElement("p");
+                pEl.innerHTML = `El número ${numero} es divisible por 7`;
+                resultado.append(pEl);
+                console.log("divisible x 7");
+            }
+            if (!(numero % 2 == 0 || numero % 3 == 0 || numero % 5 == 0 || numero % 7 == 0)){
+                const pEl = document.createElement("p");
+                pEl.innerHTML = `El número ${numero} no es divisible ni por 2, 3, 5 o 7.`;
+                resultado.append(pEl);
+                console.log("divisible x ninguno");
+            }
+        } else {
+            resultado.innerHTML = `Debe ingresar un numero!!`;
         }
-        if (numero % 5 == 0){
-            const pEl = document.createElement("p");
-            pEl.innerHTML = `El número ${numero} es divisible por 5`;
-            resultado.append(pEl);
-            console.log("divisible x 5");
-        }
-        if (numero % 7 == 0) {
-            const pEl = document.createElement("p");
-            pEl.innerHTML = `El número ${numero} es divisible por 7`;
-            resultado.append(pEl);
-            console.log("divisible x 7");
-        }
-        if (!(numero % 2 == 0 || numero % 3 == 0 || numero % 5 == 0 || numero % 7 == 0)){
-            const pEl = document.createElement("p");
-            pEl.innerHTML = `El número ${numero} no es divisible ni por 2, 3, 5 o 7.`;
-            resultado.append(pEl);
-            console.log("divisible x ninguno");
-        }
+
     });
 
     el.append(articleEl);
