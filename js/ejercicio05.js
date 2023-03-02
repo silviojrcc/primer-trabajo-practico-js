@@ -4,10 +4,10 @@ function ejercicio05(){
     const numero2 = prompt("Ingrese otro numero");
 
     console.log(numero2);
-    if (numero1 === "" || numero2 === "" || isNaN(numero1) || isNaN(numero2)) {
-        alert("Por favor, ingrese números válidos");
-    } else {
+    if (!numero1 === "" && !numero2 === "" && !isNaN(numero1) && !isNaN(numero2)) {
         const resultado = parseInt(numero1) + parseInt(numero2);
         document.write("La suma de los numeros ingresados es: ", resultado);
+    } else {
+        alert("Por favor, ingrese números válidos");
     }
 }
