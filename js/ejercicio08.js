@@ -19,7 +19,11 @@ function ejercicio08(el) {
         const resultado = articleEl.querySelector(".resultado");
         const numero = parseInt(numeroText);
 
-        numero % 2 == 0 ? resultado.innerHTML = `El numero ${numero} es par` : resultado.innerHTML = `El numero ${numero} es impar`;
+        if (!isNaN(numero)) {
+            numero % 2 == 0 ? resultado.innerHTML = `El numero ${numero} es par` : resultado.innerHTML = `El numero ${numero} es impar`;
+        } else {
+            resultado.innerHTML = `Debe ingresar un numero!`;
+        }
     });
 
     el.append(articleEl);
