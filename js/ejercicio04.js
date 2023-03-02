@@ -1,4 +1,10 @@
 function ejercicio04(){
-    const nombreUsuario = prompt("Escribe tu nombre");
+    let nombreUsuario = prompt("Escribe tu nombre");
+
+    if (nombreUsuario === "" || nombreUsuario === null) {
+        alert("Debes ingresar un nombre válido");
+        nombreUsuario = prompt("Escribe tu nombre");
+    }
+
     document.write("Hola ", nombreUsuario);
 }
